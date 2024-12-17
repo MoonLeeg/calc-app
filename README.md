@@ -39,11 +39,13 @@ git clone https://github.com/MoonLeeg/calc-app.git
 cd calc-app
 Запуск сервиса
 Запустите сервер с помощью команды:
-
+```
+```
 bash
 
 Copy
 go run ./cmd/main.go
+```
 Сервер запустится на порту 8080.
 
 Использование
