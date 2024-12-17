@@ -37,11 +37,10 @@
 ```bash
 git clone https://github.com/MoonLeeg/calc-app.git
 cd calc-app
+```
 Запуск сервиса
 Запустите сервер с помощью команды:
-```
-```
-bash
+```bash
 
 Copy
 go run ./cmd/main.go
