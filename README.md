@@ -85,8 +85,8 @@ URL: /api/v1/calculate
   "error": "Internal server error"
 }
 ```
-##Примеры запросов
-#Успешный запрос
+## Примеры запросов  
+# Успешный запрос  
 ```Copy
 curl --location 'http://localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
