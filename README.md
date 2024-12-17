@@ -50,7 +50,7 @@ URL: /api/v1/calculate
 Метод: POST  
 
 Тело ответа: ```json``` 
-``` 
+```json 
 { 
   "expression": "ваше арифметическое выражение" 
 }
