@@ -56,55 +56,51 @@ URL: /api/v1/calculate
 }
 ```
 Успешный ответ:
-
+```
 Код состояния: 200 OK
-
-Тело ответа:
-
-json
-
-Copy
+```
+Тело ответа: ```json```
+```Copy
 {
   "result": "результат вычисления"
 }
+```
 Ошибки:
+Код состояния: 
+```422 Unprocessable Entity```
 
-Код состояния: 422 Unprocessable Entity
+Тело ответа: ```json```
 
-Тело ответа:
-
-json
-
-Copy
+```Copy
 {
   "error": "Expression is not valid"
 }
-Код состояния: 500 Internal Server Error
+```
+Код состояния: ```500 Internal Server Error```
 
-Тело ответа:
+Тело ответа: ```json```
 
-json
-
-Copy
+```Copy
 {
   "error": "Internal server error"
 }
-Примеры запросов
-Успешный запрос
-bash
-
-Copy
+```
+##Примеры запросов
+#Успешный запрос
+```Copy
 curl --location 'http://localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
 --data '{"expression": "2+2*2"}'
+```
 Ответ:
 
-json
+```json
 
-Copy
 {
   "result": "6"
 }
+```
+
 Ошибка 422
 Отправка некорректного выражения (например, с лишними символами):
 
