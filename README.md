@@ -45,11 +45,11 @@ go run ./cmd/main.go
 ```
 Сервер запустится на порту 8080.
 
-Использование API Эндпоинт /
-URL: /api/v1/calculate /
-Метод: POST /
+Использование API Эндпоинт  
+URL: /api/v1/calculate  
+Метод: POST  
 
-Content-Type: ```json``` 
+Тело ответа: ```json``` 
 ``` 
 { 
   "expression": "ваше арифметическое выражение" 
