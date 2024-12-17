@@ -49,10 +49,8 @@ go run ./cmd/main.go
 API Эндпоинт
 URL: /api/v1/calculate
 Метод: POST
-Заголовки:
 
-Content-Type: application/json
-```json``` 
+Content-Type: ```json``` 
 ``` 
 { 
   "expression": "ваше арифметическое выражение" 
