@@ -45,7 +45,7 @@ go run ./cmd/main.go
 ```
 Сервер запустится на порту 8080.
 
-## Использование API Эндпоинт  
+## API Эндпоинт  
 
 **URL**: ```/api/v1/calculate```  
 Метод: ```POST```
@@ -61,18 +61,17 @@ go run ./cmd/main.go
 Код состояния: 200 OK
 ```
 Тело ответа: ```json```
-```Copy
+``` Copy
 {
   "result": "результат вычисления"
 }
 ```
-Ошибки:
-Код состояния: 
-```422 Unprocessable Entity```
+### Ошибки:  
+Код состояния: ```422 Unprocessable Entity```
 
 Тело ответа: ```json```
 
-```Copy
+``` Copy
 {
   "error": "Expression is not valid"
 }
@@ -81,7 +80,7 @@ go run ./cmd/main.go
 
 Тело ответа: ```json```
 
-```Copy
+``` Copy
 {
   "error": "Internal server error"
 }
@@ -102,46 +101,43 @@ curl --location 'http://localhost:8080/api/v1/calculate' \
 }
 ```
 
-Ошибка 422
+Ошибка 422   
 Отправка некорректного выражения (например, с лишними символами):
 
-bash
-
-Copy
+``` bash
 curl --location 'http://localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
 --data '{"expression": "2++2"}'
+```
+
 Ответ:
 
-json
-
-Copy
+``` json
 {
   "error": "Expression is not valid"
 }
-Ошибка 500
+```
+Ошибка 500   
 Симуляция внутренней ошибки сервера (например, если вызвать панику в коде):
 
-bash
-
-Copy
+``` bash
 curl --location 'http://localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
 --data '{"expression": "simulate server error"}'
+```
+
 Ответ:
-
-json
-
-Copy
+``` json
 {
   "error": "Internal server error"
 }
-Примечание: Для достижения кода 500 вы можете временно изменить код сервера, чтобы искусственно вызвать ошибку.
+```
+> **Примечание**: Для достижения кода 500 вы можете временно изменить код сервера, чтобы искусственно вызвать ошибку.  
 
-Тестирование
+## Тестирование
+
 Для запуска тестов выполните команду:
 
-bash
-
-Copy
+``` bash
 go test ./...
+```
