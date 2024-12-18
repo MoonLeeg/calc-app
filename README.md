@@ -48,9 +48,9 @@ go run ./cmd/main.go
 ## API Эндпоинт  
 
 **URL**: ```/api/v1/calculate```  
-Метод: ```POST```
+**Метод**: ```POST```
 
-Тело ответа: ```json``` 
+Тело запроса:  
 ``` json 
 { 
   "expression": "ваше арифметическое выражение" 
@@ -60,8 +60,8 @@ go run ./cmd/main.go
 ```
 Код состояния: 200 OK
 ```
-Тело ответа: ```json```
-``` Copy
+Тело ответа:
+``` json
 {
   "result": "результат вычисления"
 }
@@ -69,18 +69,18 @@ go run ./cmd/main.go
 ### Ошибки:  
 Код состояния: ```422 Unprocessable Entity```
 
-Тело ответа: ```json```
+Тело ответа:  
 
-``` Copy
+``` json
 {
   "error": "Expression is not valid"
 }
 ```
 Код состояния: ```500 Internal Server Error```
 
-Тело ответа: ```json```
+Тело ответа:  
 
-``` Copy
+``` json
 {
   "error": "Internal server error"
 }
